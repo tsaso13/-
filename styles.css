@@ -1,0 +1,120 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif; /* შრიფტის ტიპი */
+    background-color: #f8f9fa; /* მსუბუქი ფონდი */
+    color: #343a40; /* მუქი ნაცრისფერი ტექსტი */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff; /* ლურჯი ფონდი */
+    color: white; /* თეთრი ტექსტი */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none; /* სია სექრეტში */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* ყველა ელემენტი ვერტიკალურად */
+    margin: 0 15px; /* მარგინები */
+}
+
+nav ul li a {
+    color: white; /* თეთრი ტექსტი */
+    text-decoration: none; /* ხაზგასმა */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* ხაზგასმა ვადის ცვლილებაზე */
+}
+
+/* Carousel */
+.carousel-inner img {
+    width: 100%; /* სლაიდების სიგანე */
+    height: auto; /* სიმაღლე ავტომატურად */
+}
+
+/* Section Styles */
+section {
+    padding: 30px;
+    background-color: #ffffff; /* თეთრი ფონდი */
+    margin: 20px auto; /* შიდა მარჟა */
+    border-radius: 8px; /* სასურველი ფორმა */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ჩრდილი */
+    max-width: 800px; /* მაქსიმალური სიგანე */
+}
+
+/* Headings */
+h2 {
+    color: #007bff; /* ლურჯი */
+    margin-bottom: 15px; /* ქვედა მარგინები */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* ელემენტები ვერტიკალურად */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    padding: 12px;
+    margin: 10px 0; /* მარჟები */
+    border: 1px solid #ced4da; /* საზღვარი */
+    border-radius: 5px; /* სასურველი ფორმა */
+}
+
+textarea {
+    resize: vertical; /* მხოლოდ ვერტიკალური გაზომვა */
+}
+
+button {
+    padding: 12px;
+    background-color: #28a745; /* მწვანე ფონდი */
+    color: white; /* თეთრი ტექსტი */
+    border: none; /* საზღვარი არ აქვთ */
+    border-radius: 5px; /* სასურველი ფორმა */
+    cursor: pointer; /* მაუსის კურსორი */
+}
+
+button:hover {
+    background-color: #218838; /* მუქი მწვანე ფერი */
+}
+
+/* Additional styles for testimonials and doctors */
+.doctor-list, .testimonials {
+    display: flex;
+    flex-wrap: wrap; /* ელემენტების გადანაწილება */
+}
+
+.doctor-list div, .testimonials div {
+    background: #e9ecef; /* მსუბუქი ნაცრისფერი ფონდი */
+    border-radius: 5px; /* სასურველი ფორმა */
+    padding: 10px;
+    margin: 5px;
+    flex: 1 1 calc(33.333% - 10px); /* სამი სვეტი */
+}
+
+@media (max-width: 768px) {
+    .doctor-list div, .testimonials div {
+        flex: 1 1 calc(50% - 10px); /* ორი სვეტი */
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-list div, .testimonials div {
+        flex: 1 1 100%; /* ერთი სვეტი */
+    }
+}
